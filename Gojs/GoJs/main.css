@@ -1,0 +1,98 @@
+body { margin: 0; }
+    #myDiagramDiv { width: 100%; height: 100vh; }
+
+h1.title { 
+    color: rgb(255, 255, 255);
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+}
+
+div.header  {
+    background-color: #ff0000;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    height: 50px;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    color: rgb(255, 255, 255);
+}
+
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    background-color: #f8f9fa;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1); /* Sombra en el lado izquierdo */
+    overflow-y: auto;
+    z-index: 1000; /* Asegura que la barra lateral esté encima del contenido */
+    transition: transform 0.3s ease; /* Animación de transición */
+}
+
+/* Estilos para el contenido de la barra lateral */
+.sidebar-content {
+    padding: 40px;
+}
+
+/* Estilos para el botón de cerrar la barra lateral */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    color: #6c757d;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+    color: #212529;
+}
+
+/* Estilos para el botón de cerrar (icono X) */
+.close-btn::before {
+    content: '\00D7';
+}
+
+/* Estilos para el campo de búsqueda */
+.search-bar {
+    margin-bottom: 20px;
+}
+
+.search-input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    outline: none;
+}
+
+.search-btn {
+    padding: 10px 20px;
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+}
+
+.search-btn:hover {
+    background-color: #0056b3;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center; /* Centrar verticalmente */
+}
+
+.logo {
+    margin-right: 360px; /* Espacio entre la imagen y el texto */
+}
