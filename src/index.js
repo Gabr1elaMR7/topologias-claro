@@ -28,7 +28,7 @@ function init() {
         })
       ),
       $(go.TextBlock,
-        { margin: 0, textAlign: "center", maxSize: new go.Size(200, NaN) },
+        { margin: 4, textAlign: "center", maxSize: new go.Size(200, NaN) },
         new go.Binding("text", "key") // Enlaza la propiedad "key" de los datos del nodo con el texto del nodo
       )
     );
@@ -39,11 +39,10 @@ function init() {
       $(go.Shape, { stroke: "black" }),
       $(go.Shape, { toArrow: "" }),  // Establecer la propiedad toArrow en "" para ocultar las flechas
       $(go.TextBlock,  // Agregar un bloque de texto para mostrar el puerto
-        { margin: 4, background: "white" },
+        { margin: 0, background: "white" },
         new go.Binding("text", "port"))  // Enlazar el texto al dato "port" del enlace
     );
-  
-  // Crear los nodos y enlaces
+    // Crear los nodos y enlaces
   var model = $(go.GraphLinksModel);
   model.nodeDataArray = [
     { key: "ZAC_MED_ATP_SABANETA_N1_C600" },
@@ -60,8 +59,13 @@ function init() {
     { key: "ZAC-BOG.CALLEJA-H1-C600"},
     { key: "AAG-BOG.CALLEJA-C4"},  
     { key: "ACO-BOG.TOBERIN-M7"},
-    { key: "THBHTOBERINCCM"}
+    { key: "THBHTOBERINCCM"},
+   
   ];
+
+  // model.nodeDataArray = [
+    
+  // ];
 
   model.linkDataArray = [
     { from: "ZAC_MED_ATP_SABANETA_N1_C600",fromPort:'1/10/2', to: "ISWFTTHSABANΕΤΑΑΤΡ",toport: 'Xge0/0/1' },
