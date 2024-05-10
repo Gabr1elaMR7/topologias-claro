@@ -16,8 +16,6 @@ function buscarValor(matriz, valor) {
     return filasEncontradas; // Devolver todas las filas encontradas que contienen el valor
 }
 
-// Ejemplo de uso: buscar el valor 1
-// Suponiendo que tienes una función buscarValor implementada que devuelve filasEncontradas correctamente
 
 // Función para imprimir una tabla en la consola
 function imprimirTabla(filasEncontradas) {
