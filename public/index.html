@@ -1,0 +1,60 @@
+<!DOCTYPE html> 
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Topologias</title>
+</head>
+<body>
+    <div class="header">
+        <div class="logo-container">
+            <img src="ElementosGraficos/Claro.jpg" alt="Logo" class="logo" style="width: 80px; height: 80px; margin-left: 10px;">
+            <h1 id="title">TOPOLOGIAS</h1>
+        </div>   
+    </div>
+    <div id="myDiagramDiv" style="width: 1000px; height: 600px; border: 1px solid black;"></div>
+    <div class="sidebar">
+      <div class="sidebar-content">
+          <div class="search-bar">
+            <input id="searchInput" type="text" class="search-input" placeholder="Buscar...">
+            <button id="searchButton" class="searchButton">Buscar</button> 
+          </div>
+          <div id="searchResults"></div> <!-- Contenedor para mostrar los resultados -->
+      </div>
+  </div>
+
+    <script src="https://unpkg.com/gojs/release/go.js"></script>
+    <script src="../src/coneccion.js"></script>
+    <script>
+        window.onload = function() {
+            var searchInput = document.getElementById("searchInput");
+            var searchButton = document.getElementById("searchButton");
+
+            function handleSearch() {
+                var searchValue = searchInput.value;
+                buscarEnBaseDeDatos(searchValue, function(results) {
+                    showSearchResults(results);
+                });
+            }
+
+            searchInput.addEventListener("keypress", function(event) {
+                if (event.key === "Enter") {
+                    handleSearch();
+                }
+            });
+
+            searchButton.addEventListener("click", handleSearch);
+        };
+
+        function showSearchResults(results) {
+            var searchResultsDiv = document.getElementById("searchResults");
+            searchResultsDiv.innerHTML = "<p>Resultados de la búsqueda:</p>";
+            results.forEach(function(result) {
+                searchResultsDiv.innerHTML += "<p>" + result.key + "</p>";
+            });
+        }
+    </script>
+</body>
+</html>
+V
