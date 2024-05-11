@@ -11,6 +11,7 @@ function buscarValor(matriz, valor) {
         }
     }
     if (filasEncontradas.length === 0) {
+        
         console.log("El valor no se encuentra en la matriz.");
     }
     return filasEncontradas; // Devolver todas las filas encontradas que contienen el valor
@@ -40,7 +41,7 @@ function imprimirTabla(filasEncontradas) {
 }
 
 // Suponiendo que tienes definida la función buscarValor que devuelve las filas encontradas
-var filasEncontradas = buscarValor(matriz, "THBHCUMBRECCM");
+var filasEncontradas = buscarValor(matriz, "ZAC-ANT.LACEJA4-B2-C600");
 if (filasEncontradas.length > 0) {
     imprimirTabla(filasEncontradas);
     console.log(filasEncontradas.length);
