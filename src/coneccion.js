@@ -1,4 +1,4 @@
-const mysql = require('mysql');
+import * as mysql from "mysql";
 
 const conexion = mysql.createConnection({
   host: "localhost",
@@ -18,7 +18,6 @@ function buscarEnBaseDeDatos(searchValue, callback) {
           lista.forEach(function(row) {
               llaves.push({ key: row.EquipoDestino });
           });
-
           callback(llaves); // Llamar al callback con los resultados
       }
   });
