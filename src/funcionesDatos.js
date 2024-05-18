@@ -9,7 +9,7 @@ function buscarValor(matriz, valor) {
                 break; // Terminar la búsqueda en esta fila después de encontrar el valor
             }
         }
-    }
+    }///jhh
     if (filasEncontradas.length === 0) {
         
         console.log("El valor no se encuentra en la matriz.");
